@@ -1,0 +1,33 @@
+<div class="post">
+    <div class="col thumbnail">
+        <a href="{{url}}">
+                        <img src="{{imageUrl}}">
+                    </a>
+    </div>
+    <div class="post-content">
+        <div class="title">
+            <a href="{{url}}">
+                            {{title}}
+                        </a>
+        </div>
+        <div class="details">
+            {{#if description}}
+            <p>{{description}}</p>
+            {{else}}
+            <p>No description.</p>
+            {{/if}}
+            <div class="info">
+                submitted {{posted}} ago by {{author}}
+            </div>
+            <div class="controls">
+                {{#if isAuthor}}
+                <ul>
+                    <li class="action"><a class="editLink" href="#/edit/:{{_id}}">edit</a></li>
+                    <li class="action"><a class="deleteLink" href="#/delete/:{{_id}}">delete</a></li>
+                </ul>{{/if}}
+            </div>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

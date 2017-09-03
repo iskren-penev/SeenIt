@@ -1,0 +1,18 @@
+<form id="registerForm" method="post" action="#/register">
+    <h2>Register</h2>
+    <label>Username:</label>
+    <input name="username" type="text">
+    <label>Password:</label>
+    <input name="password" type="password">
+    <label>Repeat Password:</label>
+    <input name="repeatPass" type="password">
+    <input id="btnRegister" value="Sign Up" type="button" onclick="submitRegister()">
+</form>
+<script>
+    function submitRegister() {
+        $('#registerForm').submit();
+        $('input[type="text"], textarea').val('');
+        $('input[type="password"], textarea').val('');
+        
+    }
+</script>
